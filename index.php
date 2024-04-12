@@ -16,7 +16,7 @@
   <?php
   require_once('pdo.php');
 
-
+  //hoss 
   ?>
   <!-- Start login page -->
   <div class="login-page position-relative" id="log-in">
