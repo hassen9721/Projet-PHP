@@ -29,7 +29,7 @@ if (!empty($_POST['email']) && !empty($_POST['password'])) // Si email password 
 
 
 
-                header('Location: test.php');
+                header('Location: home.php');
                 die();
             } else {
                 header('Location: index.php?login_err=password');
