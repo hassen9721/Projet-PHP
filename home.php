@@ -43,7 +43,7 @@
                             <a class="nav-link active" aria-current="page" href="#">Accessoires</a>
                         </li>
                     </ul>
-                    <div class="right-side"><i class="fa-solid fa-cart-shopping"></i><span class="fs-4 fw-normal ms-1 me-1">|</span><i class="fa-solid fa-user"></i><span class="user-name ms-2 me-2">Zeyad</span><i class="fa-solid fa-caret-down"></i></div>
+                    <div class="right-side"><i class="fa-solid fa-cart-shopping"></i><span class="fs-4 fw-normal ms-1 me-1">|</span><i class="fa-solid fa-user"></i><span class="user-name ms-2 me-2">Zeyad</span>|<a class="" href="deconnexion.php">Déconnexion</a></div>
                 </div>
             </div>
         </nav>

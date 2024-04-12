@@ -14,3 +14,4 @@ $connexion = 1;
 // Prepare SQL statement
 $sql = "INSERT INTO users (nom, prenom, email, password, isAdmin,connexion) VALUES ('$nom', '$prenom', '$email', '$password', '$isAdmin', '$connexion')";
 $pdo->exec($sql);
+header('Location: home.php');
