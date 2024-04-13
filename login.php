@@ -150,7 +150,7 @@ button{
             if ($data){
                 $_SESSION["connecte"]="1";
                 $_SESSION["user"]=$data[0]["user"];
-                header("location:liste_etudiant.php");
+                header("location:landing.php");
                 exit();
             }
             else
