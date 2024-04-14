@@ -31,14 +31,7 @@
                 <h2>Jordan Proto-Lyte <br>
                     <span>Running Collection</span>
                 </h2>
-                <p>
-                    Featuring soft foam cushioning and lightweight, woven fabric in the upper, the Jordan Proto-Lyte is
-                    made for all-day, bouncy comfort.
-                    Lightweight Breathability: Lightweight woven fabric with real or synthetic leather provides
-                    breathable support.
-                    Cushioned Comfort: A full-length foam midsole delivers lightweight, plush cushioning.
-                    Secure Traction: Exaggerated herringbone-pattern outsole offers traction on a variety of surfaces.
-                </p>
+
                 <p class="product-colors">Available Colors:
                     <span class="black active" data-color-primary="#000" data-color-sec="#212121"
                         data-pic="https://github.com/anuzbvbmaniac/Responsive-Product-Card---CSS-ONLY/blob/master/assets/img/jordan_proto.png?raw=true"></span>
@@ -47,7 +40,14 @@
                     <span class="orange" data-color-primary="#CE5B39" data-color-sec="#F18557"
                         data-pic="https://github.com/anuzbvbmaniac/Responsive-Product-Card---CSS-ONLY/blob/master/assets/img/jordan_proto_orange_black.png?raw=true"></span>
                 </p>
-                <h3>TND. 12,800</h3>
+                <h3>TND. 12,800</h3><br><br><br><br>
+                <label for="qte">Quantite</label>
+                <input type="number" name="qte" id="qte" onchange="updateTotal()" min="0" />
+                <br><br><br><br>
+                <label for="qte">Totale</label>
+
+                <strong id="total">0</strong>
+                <br><br><br><br>
                 <button>Buy Now</button>
             </div>
         </div>
@@ -66,6 +66,14 @@
         $(".container .details button").css("background", $(this).attr("data-color-sec"));
         $(".imgBx img").attr('src', $(this).attr("data-pic"));
     });
+
+    function updateTotal() {
+        var prix = 12.800; // or you can fetch this value dynamically if it changes
+        var qteInput = document.getElementById("qte");
+        var qte = qteInput.value;
+        var total = prix * qte;
+        document.getElementById("total").textContent = "TND. " + total.toFixed(2);
+    }
     </script>
 </body>
 

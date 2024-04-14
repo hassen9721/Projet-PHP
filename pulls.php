@@ -37,7 +37,6 @@ Verifier_session();
         </div>
     </div>
 
-
     <script>
     </script>
 </body>
