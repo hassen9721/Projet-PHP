@@ -20,44 +20,44 @@
 
     <br><br><br><br><br>
     <div class="form-bg">
-            <div class="container">
-                    <div class="row">
-                            <div class="col-md-offset-3 col-md-6">
-                                    <div class="form-container">
-                                            <h3 class="title">Ajouter un Produit</h3>
-                                            <form class="form-horizontal" action="saveProduct.php" method="post" enctype="multipart/form-data">
-                                                    <div class="form-group">
-                                                            <label>Nom du Produit</label>
-                                                            <input type="text" name="nom" class="form-control" placeholder="Nom du Produit">
-                                                        </div>
-                                                    <div class="form-group">
-                                                            <label>Description du Produit</label>
-                                                            <textarea type="text" name="description" class="form-control" placeholder="Description du Produit" cols="33"></textarea>
-                                                        </div>
-                                                    <div class="form-group">
-                                                            <label>Prix du Produit</label>
-                                                            <input type="number" name="prix" class="form-control" placeholder="Prix du Produit">
-                                                        </div>
-                                                    <div class="form-group">
-                                                            <label>Catégorie du Produit</label>
-                                                            <select class="form-control" name="categorie">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-offset-3 col-md-6">
+                    <div class="form-container">
+                        <h3 class="title">Ajouter un Produit</h3>
+                        <form class="form-horizontal" action="saveProduct.php" method="post" enctype="multipart/form-data">
+                            <div class="form-group">
+                                <label>Nom du Produit</label>
+                                <input type="text" name="nom" class="form-control" placeholder="Nom du Produit">
+                                </div>
+                            <div class="form-group">
+                                <label>Description du Produit</label>
+                                <textarea type="text" name="description" class="form-control" placeholder="Description du Produit" cols="33"></textarea>
+                                </div>
+                            <div class="form-group">
+                                <label>Prix du Produit</label>
+                                <input type="number" name="prix" class="form-control" placeholder="Prix du Produit">
+                                </div>
+                            <div class="form-group">
+                                <label>Catégorie du Produit</label>
+                                <select class="form-control" name="categorie">
 
-                                                                    <option value="vetements">Vêtements</option>
-                                                                    <option value="accessoires">Accessoires</option>
-                                                                    <option value="chaussures">Chaussures</option>
-                                                                </select>
-                                                        </div>
-                                                    <div class="form-group">
-                                                            <label>Photo</label>
-                                                            <input type="file" name="photo" class="form-control" placeholder="Photo du Produit">
-                                                        </div>
-                                                     <div class="form-group">
+                                    <option value="vetements">Vêtements</option>
+                                    <option value="accessoires">Accessoires</option>
+                                    <option value="chaussures">Chaussures</option>
+                                    </select>
+                                </div>
+                            <div class="form-group">
+                                <label>Photo</label>
+                                <input type="file" name="photo" class="form-control" placeholder="Photo du Produit">
+                                </div>
+                             <div class="form-group">
                                 <button type="submit" class="btn btn-primary">Ajouter</button>
                             </div>
-                                            </div>
-                                </div>
-                        </div>
-                </div>
+                            </div>
+                    </div>
+                </div>
+            </div>
     </div>
 
 

@@ -1,4 +1,3 @@
-
 <?php
 function Verifier_session()
 {
