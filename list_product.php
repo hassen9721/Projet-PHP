@@ -53,7 +53,7 @@ Verifier_session();
                     </div>
                     <h6 class="text-success"><?php echo $row['categorie'] ?></h6>
                     <div class="d-flex flex-column mt-4">
-                      <a href="modifForm.php?id_etd=<?php echo $row['id']; ?>" class="btn btn-primary btn-sm" role="button">Modifier</a>
+                      <a href="editProduct.php?id_prod=<?php echo $row['id']; ?>" class="btn btn-primary btn-sm" role="button">Modifier</a>
                       <a href="deleteProduct.php?id_prod=<?= $row['id']; ?>" class="btn btn-danger btn-sm" role="button">Supprimer</a>
                     </div>
                   </div>

@@ -14,50 +14,71 @@
     require_once "headerAdmin.php";
     require_once "session.php";
     Verifier_session();
-    require_once "pdo.php";
+    require_once('product.class.php');
+    $us = new Product();
+    $res = $us->getProduct($_GET['id_prod']);
+    $data = $res->fetchAll(PDO::FETCH_ASSOC);
+    $id = $data[0]["id"];
+    $nom = $data[0]["nom"];
+    $description = $data[0]["description"];
+    $categorie = $data[0]["categorie"];
+    $prix = $data[0]["prix"];
+    $photo = $data[0]["photo"];
+
+    /* récupération des données du formulaire */
+    $id_prod = $_GET['id_prod'];
 
     ?>
 
     <br><br><br><br><br>
     <div class="form-bg">
-            <div class="container">
-                    <div class="row">
-                            <div class="col-md-offset-3 col-md-6">
-                                    <div class="form-container">
-                                            <h3 class="title">Ajouter un Produit</h3>
-                                            <form class="form-horizontal" action="saveProduct.php" method="post" enctype="multipart/form-data">
-                                                    <div class="form-group">
-                                                            <label>Nom du Produit</label>
-                                                            <input type="text" name="nom" class="form-control" placeholder="Nom du Produit">
-                                                        </div>
-                                                    <div class="form-group">
-                                                            <label>Description du Produit</label>
-                                                            <textarea type="text" name="description" class="form-control" placeholder="Description du Produit" cols="33"></textarea>
-                                                        </div>
-                                                    <div class="form-group">
-                                                            <label>Prix du Produit</label>
-                                                            <input type="number" name="prix" class="form-control" placeholder="Prix du Produit">
-                                                        </div>
-                                                    <div class="form-group">
-                                                            <label>Catégorie du Produit</label>
-                                                            <select class="form-control" name="categorie">
-
-                                                                    <option value="vetements">Vêtements</option>
-                                                                    <option value="accessoires">Accessoires</option>
-                                                                    <option value="chaussures">Chaussures</option>
-                                                                </select>
-                                                        </div>
-                                                    <div class="form-group">
-                                                            <label>Photo</label>
-                                                            <input type="file" name="photo" class="form-control" placeholder="Photo du Produit">
-                                                        </div>
-                                                     <div class="form-group">
-                                <button type="submit" class="btn btn-primary">Ajouter</button>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-offset-3 col-md-6">
+                    <div class="form-container">
+                        <h3 class="title">Modifier Produit</h3>
+                            <form class="form-horizontal" action="edit.php" method="post" enctype="multipart/form-data">
+                                <div class="form-group">
+                                <label name="id">
+                                    <?php echo $id_prod; ?>
+                                </label>
+                                <input type="hidden" name="id" id="id" value="<?php echo ($id_prod) ?>">
+                                    <label>Nom du Produit</label>
+                                    <input type="text" name="nom" class="form-control" placeholder="Nom du Produit" value="<?php echo $nom ?>">                       
                             </div>
-                                            </div>
-                                </div>
-                        </div>
-                </div>
+                            <div class="form-group">
+                                <label>Description du Produit</label>
+                                <textarea type="text" name="description" class="form-control" placeholder="Description du Produit" cols="33"> <?php echo $description ?></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label>Prix du Produit</label>
+                                <input type="number" name="prix" class="form-control" placeholder="Prix du Produit" value="<?php echo $prix ?>">
+                            </div>
+                            <div class="form-group">
+                                <label>Catégorie du Produit</label>
+                                <select class="form-control" name="categorie">
+                                    <option value="vetements" <?php if ($categorie == 'vetements') echo ' selected'; ?>>Vêtements</option>
+                                    <option value="accessoires" <?php if ($categorie == 'accessoires') echo ' selected'; ?>>Accessoires</option>
+                                    <option value="chaussures" <?php if ($categorie == 'chaussures') echo ' selected'; ?>>Chaussures</option>
+                                </select>                         
+                            </div>
+                            <div class="form-group">
+                                <label>Photo</label>
+                                <input type="file" name="photo" class="form-control" placeholder="Photo du Produit">                       
+                            </div>
+                            <div class="form-group">
+                                <img src="images/<?= $photo ?>" width="400" height="500">                         
+                            </div>
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-primary">Modifier</button>
+                            </div>                 
+                    </div>
+                                
+                </div>
+                        
+            </div>
+                
+        </div>
     </div>
 
 
