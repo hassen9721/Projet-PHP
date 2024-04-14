@@ -7,6 +7,8 @@ $et->nom = $_POST['nom'];
 $et->description  = $_POST['description'];
 $et->categorie  = $_POST['categorie'];
 $et->prix  = $_POST['prix'];
+$et->type  = $_POST['type'];
+
 
 // Vérifier si le fichier a été téléchargé avec succès
 if (isset($_FILES['photo']) && $_FILES['photo']['error'] === UPLOAD_ERR_OK) {

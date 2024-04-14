@@ -1,8 +1,8 @@
 <?php
- require_once "header.php";
- require_once "session.php";
- Verifier_session();
- ?>
+require_once "header.php";
+require_once "session.php";
+Verifier_session();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,8 +13,7 @@
     <meta charset="UTF-8">
     <title>site web de vente</title>
     <!-- <link rel="stylesheet" href="css/boots.css"> -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
-        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -23,8 +22,7 @@
     <div class="container">
 
         <div class="imgBx">
-            <img src="https://github.com/anuzbvbmaniac/Responsive-Product-Card---CSS-ONLY/blob/master/assets/img/jordan_proto.png?raw=true"
-                alt="Nike Jordan Proto-Lyte Image">
+            <img src="https://github.com/anuzbvbmaniac/Responsive-Product-Card---CSS-ONLY/blob/master/assets/img/jordan_proto.png?raw=true" alt="Nike Jordan Proto-Lyte Image">
         </div>
         <div class="details">
             <div class="content">
@@ -38,6 +36,7 @@
             </div>
         </div>
     </div>
+
 
     <script>
     </script>

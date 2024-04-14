@@ -63,6 +63,26 @@
                                 </select>                         
                             </div>
                             <div class="form-group">
+                                <label>Type du Produit</label>
+                                <select class="form-control" name="type">
+                                    <?php
+                                    switch ($categorie) {
+                                        case 'vetements':
+                                            echo '<option value="pantalon">Pantalon</option><option value="pull">Pull</option>';
+                                            break;
+                                        case 'accessoires':
+                                            echo '<option value="montre">Montre</option><option value="colier">Collier</option>';
+                                            break;
+                                        case 'chaussures':
+                                            echo '<option value="chaussure">Chaussure</option>';
+                                            break;
+                                        default:
+                                            echo '<option value="">Sélectionner un type</option>';
+                                    }
+                                    ?>
+                                </select>
+                            </div>
+                            <div class="form-group">
                                 <label>Photo</label>
                                 <input type="file" name="photo" class="form-control" placeholder="Photo du Produit">                       
                             </div>

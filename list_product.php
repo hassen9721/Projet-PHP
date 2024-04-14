@@ -41,6 +41,7 @@ Verifier_session();
                   <div class="col-md-3 mt-1"><img class="img-fluid img-responsive rounded product-image" src="images/<?php echo $row['photo'] ?>"></div>
                   <div class="col-md-6 mt-1">
                     <h5><?php echo $row['nom'] ?></h5>
+                    <h5><?php echo $row['type'] ?></h5>
                     <div class="d-flex flex-row">
                       <div class="ratings mr-2"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div>
                     </div>

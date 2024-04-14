@@ -29,15 +29,15 @@
                             <div class="form-group">
                                 <label>Nom du Produit</label>
                                 <input type="text" name="nom" class="form-control" placeholder="Nom du Produit">
-                                </div>
+                            </div>
                             <div class="form-group">
                                 <label>Description du Produit</label>
                                 <textarea type="text" name="description" class="form-control" placeholder="Description du Produit" cols="33"></textarea>
-                                </div>
+                            </div>
                             <div class="form-group">
                                 <label>Prix du Produit</label>
                                 <input type="number" name="prix" class="form-control" placeholder="Prix du Produit">
-                                </div>
+                            </div>
                             <div class="form-group">
                                 <label>Catégorie du Produit</label>
                                 <select class="form-control" name="categorie">
@@ -45,23 +45,55 @@
                                     <option value="vetements">Vêtements</option>
                                     <option value="accessoires">Accessoires</option>
                                     <option value="chaussures">Chaussures</option>
-                                    </select>
-                                </div>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Type du Produit</label>
+                                <select class="form-control" name="type">
+                                    <!-- Options pour les différents types de produits en fonction de la catégorie sélectionnée -->
+                                    <option value="">Sélectionner un type</option>
+                                </select>
+                            </div>
                             <div class="form-group">
                                 <label>Photo</label>
                                 <input type="file" name="photo" class="form-control" placeholder="Photo du Produit">
-                                </div>
-                             <div class="form-group">
-                                <button type="submit" class="btn btn-primary">Ajouter</button>
                             </div>
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-primary">Ajouter</button>
                             </div>
                     </div>
                 </div>
             </div>
+        </div>
     </div>
 
 
 </body>
+<script>
+    document.querySelector('select[name="categorie"]').addEventListener('change', function() {
+        var typeSelect = document.querySelector('select[name="type"]');
+        typeSelect.innerHTML = ''; // Efface les options actuelles
+
+        // Récupère la valeur de la catégorie sélectionnée
+        var categorie = this.value;
+
+        // Ajoute les options correspondantes en fonction de la catégorie sélectionnée
+        switch (categorie) {
+            case 'vetements':
+                typeSelect.innerHTML = '<option value="pantalon">Pantalon</option><option value="pull">Pull</option>';
+                break;
+            case 'accessoires':
+                typeSelect.innerHTML = '<option value="montre">Montre</option><option value="colier">Collier</option>';
+                break;
+            case 'chaussures':
+                typeSelect.innerHTML = '<option value="chaussure">Chaussure</option>';
+                break;
+            default:
+                typeSelect.innerHTML = '<option value="">Sélectionner un type</option>';
+        }
+    });
+</script>
 <style>
     .form-container .title {
         color: #000;

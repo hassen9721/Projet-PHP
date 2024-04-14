@@ -6,6 +6,7 @@ $et->nom = $_POST['nom'];
 $et->description = $_POST['description'];
 $et->categorie = $_POST['categorie'];
 $et->prix = $_POST['prix'];
+$et->type  = $_POST['type'];
 $et->photo = $_FILES['photo']['name'];
 
 $photo = $_FILES['photo']['name'];
