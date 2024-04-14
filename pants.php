@@ -28,13 +28,29 @@
         </div>
         <div class="details">
             <div class="content">
-                <h2>pantalon <br>
+                <h2>mongela <br>
                     <span></span>
                 </h2>
                 <br>
 
                 <h3>TND. 12,800</h3><br>
+                <br><br><br><br>
+                <label for="qte">pantalon</label>
+                <input type="number" name="qte" id="qte" onchange="updateTotal()" min="0" />
+                <br><br><br><br>
+                <label for="qte">Totale</label>
+                <strong id="total">0</strong>
+                <br><br><br><br>
                 <button>Buy Now</button>
+                <script>
+                function updateTotal() {
+                    var prix = 12.800; // or you can fetch this value dynamically if it changes
+                    var qteInput = document.getElementById("qte");
+                    var qte = qteInput.value;
+                    var total = prix * qte;
+                    document.getElementById("total").textContent = "TND. " + total.toFixed(2);
+                }
+                </script>
             </div>
         </div>
     </div>
