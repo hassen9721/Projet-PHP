@@ -25,19 +25,13 @@ class Commande
         $pdo->exec($req_insert) or print_r($pdo->errorInfo());
     }
 
-    function modifierCommande($id, $qte)
-    {
-        $cnx = new connexion();
-        $pdo = $cnx->CNXbase();
-        $req = "UPDATE commande SET qte = $qte WHERE id = $id";
-        $pdo->exec($req) or print_r($pdo->errorInfo());
-    }
+
 
     function supprimerCommande($id)
     {
         $cnx = new connexion();
         $pdo = $cnx->CNXbase();
-        $req = "DELETE FROM commande WHERE id = $id";
+        $req = "DELETE FROM commande WHERE id_commande = $id";
         $pdo->exec($req) or print_r($pdo->errorInfo());
     }
 
@@ -45,10 +39,11 @@ class Commande
     {
         $cnx = new connexion();
         $pdo = $cnx->CNXbase();
-        $req = $req = "SELECT c.*, p.* FROM commande c INNER JOIN product p ON c.id_produit = p.id";
+        $req = "SELECT c.*, p.*, c.qte AS qte_commande FROM commande c INNER JOIN product p ON c.id_produit = p.id";
         $res = $pdo->query($req) or print_r($pdo->errorInfo());
         return $res;
     }
+
 
     function getCommande($id)
     {

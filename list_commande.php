@@ -78,13 +78,12 @@
                             <div class="col-md-6 product-details">
                                 <h5><?php echo $row['nom']; ?></h5>
                                 <p>Date de commande : <?php echo $row['date_commande']; ?></p>
-                                <p>Quantité commandée : <?php echo $row['qte']; ?></p>
+                                <p>Quantité commandée : <?php echo $row['qte_commande']; ?></p>
                                 <p>Prix unitaire : <span class="price"><?php echo $row['prix']; ?> $</span></p>
                                 <p>Catégorie : <?php echo $row['categorie']; ?></p>
                             </div>
                             <div class="col-md-3">
-                                <a href="editProduct.php?id_prod=<?php echo $row['id']; ?>" class="btn btn-primary btn-modifier">Modifier</a>
-                                <a href="deleteProduct.php?id_prod=<?= $row['id']; ?>" class="btn btn-danger btn-supprimer">Supprimer</a>
+                                <a href="deleteCommande.php?id_commande=<?= $row['id_commande']; ?>" class="btn btn-danger btn-supprimer">Supprimer</a>
                             </div>
                         </div>
                     </div>
