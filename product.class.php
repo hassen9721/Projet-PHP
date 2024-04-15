@@ -76,5 +76,16 @@ class Product
         $pdo->exec($req);
     }
 
+
+
+    function modifierQteProduct($id, $qteCmd)
+    {
+        require_once('pdo.php');
+        $cnx = new connexion();
+        $pdo = $cnx->CNXbase();
+        $req = "UPDATE product SET qte = qte - $qteCmd WHERE id = $id";
+        $pdo->exec($req) or print_r($pdo->errorInfo());
+    }
+
     //fin de la classe
 }
