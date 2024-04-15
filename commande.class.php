@@ -43,6 +43,18 @@ class Commande
         $res = $pdo->query($req) or print_r($pdo->errorInfo());
         return $res;
     }
+    function supprimerToutesCommandes()
+    {
+        // Établir une connexion à la base de données
+        $cnx = new connexion();
+        $pdo = $cnx->CNXbase();
+
+        // Préparer la requête de suppression
+        $req = "DELETE FROM commande";
+
+        // Exécuter la requête
+        $pdo->exec($req) or print_r($pdo->errorInfo());
+    }
 
 
     function getCommande($id)

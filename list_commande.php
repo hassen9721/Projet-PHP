@@ -14,8 +14,6 @@
             background: #eee;
         }
 
-
-
         .commande-item {
             background-color: #fff;
             border-radius: 5px;
@@ -65,11 +63,17 @@
     $us = new Commande();
     $res = $us->listerCommandes();
     ?>
+
     <br><br><br><br><br><br>
+
     <div class="container commande-container">
         <div class="row">
             <div class="col-md-10 col-md-offset-1">
-                <?php foreach ($res as $row) { ?>
+                <?php
+                $total_montant = 0;
+                foreach ($res as $row) {
+                    $total_montant += $row['prix'] * $row['qte_commande'];
+                ?>
                     <div class="commande-item">
                         <div class="row">
                             <div class="col-md-3">
@@ -90,7 +94,30 @@
                 <?php } ?>
             </div>
         </div>
+
+        <!-- Label pour afficher le total du montant de commande -->
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+                <h3>Total du montant de commande : <?php echo $total_montant; ?> $</h3>
+            </div>
+        </div>
+
+        <!-- Bouton "Buy" pour supprimer toutes les commandes -->
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+                <button class="btn btn-primary btn-supprimer" onclick="confirmerSuppression()">Buy</button>
+            </div>
+        </div>
     </div>
+
+    <script>
+        function confirmerSuppression() {
+            if (confirm('Félicitations! Êtes-vous sûr de vouloir supprimer toutes les commandes?')) {
+                window.location.href = 'deleteAllCommandes.php';
+            }
+        }
+    </script>
+
 </body>
 
 </html>
