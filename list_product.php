@@ -51,6 +51,7 @@ Verifier_session();
                   <div class="align-items-center align-content-center col-md-3 border-left mt-1">
                     <div class="d-flex flex-row align-items-center">
                       <h4 class="mr-1"><?php echo $row['prix'] ?> $</h4>
+                      <h4 class="mr-1">Quantité : <?php echo $row['qte'] ?> pièces</h4>
                     </div>
                     <h6 class="text-success"><?php echo $row['categorie'] ?></h6>
                     <div class="d-flex flex-column mt-4">

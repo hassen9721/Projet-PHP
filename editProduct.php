@@ -23,6 +23,10 @@
     $description = $data[0]["description"];
     $categorie = $data[0]["categorie"];
     $prix = $data[0]["prix"];
+    $type = $data[0]["type"];
+    $qte = $data[0]["qte"];
+
+
     $photo = $data[0]["photo"];
 
     /* récupération des données du formulaire */
@@ -51,6 +55,10 @@
                                 <textarea type="text" name="description" class="form-control" placeholder="Description du Produit" cols="33"> <?php echo $description ?></textarea>
                             </div>
                             <div class="form-group">
+                                <label>Quantité du Produit</label>
+                                <input type="number" name="qte" class="form-control" placeholder="qte du Produit" value="<?php echo $qte ?>">
+                            </div>
+                            <div class="form-group">
                                 <label>Prix du Produit</label>
                                 <input type="number" name="prix" class="form-control" placeholder="Prix du Produit" value="<?php echo $prix ?>">
                             </div>
@@ -65,21 +73,7 @@
                             <div class="form-group">
                                 <label>Type du Produit</label>
                                 <select class="form-control" name="type">
-                                    <?php
-                                    switch ($categorie) {
-                                        case 'vetements':
-                                            echo '<option value="pantalon">Pantalon</option><option value="pull">Pull</option>';
-                                            break;
-                                        case 'accessoires':
-                                            echo '<option value="montre">Montre</option><option value="colier">Collier</option>';
-                                            break;
-                                        case 'chaussures':
-                                            echo '<option value="chaussure">Chaussure</option>';
-                                            break;
-                                        default:
-                                            echo '<option value="">Sélectionner un type</option>';
-                                    }
-                                    ?>
+                                    <option value="<?php echo $type ?>"><?php echo $type ?></option>
                                 </select>
                             </div>
                             <div class="form-group">
@@ -103,6 +97,30 @@
 
 
 </body>
+<script>
+    document.querySelector('select[name="categorie"]').addEventListener('change', function() {
+        var typeSelect = document.querySelector('select[name="type"]');
+        typeSelect.innerHTML = ''; // Efface les options actuelles
+
+        // Récupère la valeur de la catégorie sélectionnée
+        var categorie = this.value;
+
+        // Ajoute les options correspondantes en fonction de la catégorie sélectionnée
+        switch (categorie) {
+            case 'vetements':
+                typeSelect.innerHTML = '<option value="pantalon">Pantalon</option><option value="pull">Pull</option>';
+                break;
+            case 'accessoires':
+                typeSelect.innerHTML = '<option value="montre">Montre</option><option value="colier">Collier</option>';
+                break;
+            case 'chaussures':
+                typeSelect.innerHTML = '<option value="chaussure">Chaussure</option>';
+                break;
+            default:
+                typeSelect.innerHTML = '<option value="">Sélectionner un type</option>';
+        }
+    });
+</script>
 <style>
     .form-container .title {
         color: #000;

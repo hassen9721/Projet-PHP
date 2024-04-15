@@ -9,7 +9,9 @@ class Product
     public $categorie;
     public $prix;
     public $type;
+    public $qte;
     public $photo;
+
     /* constructeur de la classe */
 
 
@@ -18,8 +20,8 @@ class Product
         require_once('pdo.php');
         $cnx = new connexion();
         $pdo = $cnx->CNXbase();
-        $req = "INSERT INTO product (nom,description,categorie,prix,photo,type) VALUES
-('$this->nom','$this->description','$this->categorie',$this->prix ,'$this->photo','$this->type')";
+        $req = "INSERT INTO product (nom,description,categorie,prix,photo,type,qte) VALUES
+('$this->nom','$this->description','$this->categorie',$this->prix ,'$this->photo','$this->type','$this->qte')";
 
         $pdo->exec($req) or print_r($pdo->errorInfo());
     }
@@ -51,7 +53,7 @@ class Product
         require_once('pdo.php');
         $cnx = new connexion();
         $pdo = $cnx->CNXbase();
-        $req = "UPDATE product SET  nom='$this->nom', description='$this->description', categorie='$this->categorie', prix='$this->prix',type='$this->type', photo='$this->photo' WHERE id=$id";
+        $req = "UPDATE product SET  nom='$this->nom', description='$this->description', categorie='$this->categorie', prix='$this->prix',type='$this->type', photo='$this->photo',qte='$this->qte' WHERE id=$id";
         $pdo->exec($req) or print_r($pdo->errorInfo());
     }
 
@@ -60,7 +62,7 @@ class Product
         require_once('pdo.php');
         $cnx = new connexion();
         $pdo = $cnx->CNXbase();
-        $req = "UPDATE product SET  nom='$this->nom', description='$this->description', categorie='$this->categorie', prix='$this->prix',type='$this->type', WHERE id=$id";
+        $req = "UPDATE product SET  nom='$this->nom', description='$this->description', categorie='$this->categorie', prix='$this->prix',type='$this->type',qte='$this->qte' WHERE id=$id";
         $pdo->exec($req) or print_r($pdo->errorInfo());
     }
 

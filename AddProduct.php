@@ -35,6 +35,10 @@
                                 <textarea type="text" name="description" class="form-control" placeholder="Description du Produit" cols="33"></textarea>
                             </div>
                             <div class="form-group">
+                                <label>Quantité du Produit</label>
+                                <input type="number" name="qte" class="form-control" placeholder="Quantité du Produit">
+                            </div>
+                            <div class="form-group">
                                 <label>Prix du Produit</label>
                                 <input type="number" name="prix" class="form-control" placeholder="Prix du Produit">
                             </div>
