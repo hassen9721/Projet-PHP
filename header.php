@@ -34,13 +34,13 @@
                                 <img src="https://fadzrinmadu.github.io/hosted-assets/responsive-mega-menu-and-dropdown-menu-using-only-html-and-css/img.jpg" alt="">
                             </div>
                             <div class="row">
-                                <header>chaussures</header>
+                                <header>Chaussures</header>
                                 <ul class="mega-links">
                                     <li><a href="boots.php">Chaussures</a></li>
                                 </ul>
                             </div>
                             <div class="row">
-                                <header>accessoires</header>
+                                <header>Accessoires</header>
                                 <ul class="mega-links">
                                     <li><a href="watchs.php">Montre</a></li>
                                     <li><a href="necklace.php">Collier</a></li>
@@ -48,7 +48,7 @@
                                 </ul>
                             </div>
                             <div class="row">
-                                <header>vetements</header>
+                                <header>Vêtements</header>
                                 <ul class="mega-links">
                                     <li><a href="pulls.php">Pull</a></li>
                                     <li><a href="pants.php">Pantalon</a></li>
