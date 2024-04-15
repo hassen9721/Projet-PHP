@@ -7,6 +7,8 @@ $et->description = $_POST['description'];
 $et->categorie = $_POST['categorie'];
 $et->prix = $_POST['prix'];
 $et->type  = $_POST['type'];
+$et->qte  = $_POST['qte'];
+
 $et->photo = $_FILES['photo']['name'];
 
 $photo = $_FILES['photo']['name'];

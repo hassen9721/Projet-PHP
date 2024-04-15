@@ -8,6 +8,8 @@ $et->description  = $_POST['description'];
 $et->categorie  = $_POST['categorie'];
 $et->prix  = $_POST['prix'];
 $et->type  = $_POST['type'];
+$et->qte  = $_POST['qte'];
+
 
 
 // Vérifier si le fichier a été téléchargé avec succès
