@@ -112,7 +112,7 @@
 
     <script>
         function confirmerSuppression() {
-            if (confirm('Félicitations! Êtes-vous sûr de vouloir supprimer toutes les commandes?')) {
+            if (confirm('Félicitations! Êtes-vous sûr de vouloir acheter toutes les commandes?')) {
                 window.location.href = 'deleteAllCommandes.php';
             }
         }

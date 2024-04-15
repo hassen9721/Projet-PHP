@@ -57,6 +57,27 @@ class Commande
     }
 
 
+    function mettreAJourQuantiteProduit($id_produit, $qte_commandee)
+    {
+        // Connexion à la base de données
+        $cnx = new connexion();
+        $pdo = $cnx->CNXbase();
+
+        // Récupérer la quantité actuelle du produit
+        $req_select = "SELECT qte FROM product WHERE id = $id_produit";
+        $res_select = $pdo->query($req_select) or print_r($pdo->errorInfo());
+        $row = $res_select->fetch(PDO::FETCH_ASSOC);
+        $qte_actuelle = $row['qte'];
+
+        // Mettre à jour la quantité du produit
+        $qte_mise_a_jour = $qte_actuelle - $qte_commandee;
+
+        // Exécuter la requête de mise à jour
+        $req_update = "UPDATE product SET qte = $qte_mise_a_jour WHERE id = $id_produit";
+        $pdo->exec($req_update) or print_r($pdo->errorInfo());
+    }
+
+
     function getCommande($id)
     {
         $cnx = new connexion();
