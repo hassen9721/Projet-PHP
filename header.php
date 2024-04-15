@@ -11,13 +11,13 @@
 
 <body>
     <?php
-        session_start();
+    session_start();
 
     ?>
     <!-- partial:index.partial.html -->
     <nav>
         <div class="wrapper">
-            <div class="logo"><a href="#"><?= $_SESSION["user"]?></a></div>
+            <div class="logo"><a href="#"><?= $_SESSION["user"] ?></a></div>
             <input type="radio" name="slider" id="menu-btn">
             <input type="radio" name="slider" id="close-btn">
             <ul class="nav-links">
@@ -31,28 +31,27 @@
                     <div class="mega-box">
                         <div class="content">
                             <div class="row">
-                                <img src="https://fadzrinmadu.github.io/hosted-assets/responsive-mega-menu-and-dropdown-menu-using-only-html-and-css/img.jpg"
-                                    alt="">
+                                <img src="https://fadzrinmadu.github.io/hosted-assets/responsive-mega-menu-and-dropdown-menu-using-only-html-and-css/img.jpg" alt="">
                             </div>
                             <div class="row">
                                 <header>chaussures</header>
                                 <ul class="mega-links">
-                                    <li><a href="boots.php">chaussures</a></li>
+                                    <li><a href="boots.php">Chaussures</a></li>
                                 </ul>
                             </div>
                             <div class="row">
                                 <header>accessoires</header>
                                 <ul class="mega-links">
-                                    <li><a href="watchs.php">montre</a></li>
-                                    <li><a href="necklace.php">collier</a></li>
+                                    <li><a href="watchs.php">Montre</a></li>
+                                    <li><a href="necklace.php">Collier</a></li>
 
                                 </ul>
                             </div>
                             <div class="row">
                                 <header>vetements</header>
                                 <ul class="mega-links">
-                                    <li><a href="pulls.php">tirer</a></li>
-                                    <li><a href="pants.php">pantalon</a></li>
+                                    <li><a href="pulls.php">Pull</a></li>
+                                    <li><a href="pants.php">Pantalon</a></li>
                                 </ul>
                             </div>
                         </div>
