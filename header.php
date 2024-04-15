@@ -61,6 +61,8 @@
                 <li><a href="contact.php">Contact</a></li>
                 <li><a href="deconnexion.php">Déconnexion</a></li>
             </ul>
+            <a href="list_commande.php"><img src="images/buy.png" width="50" height="50" style="margin-top: 30px;"></a>
+
             <label for="menu-btn" class="btn menu-btn"><i class="fas fa-bars"></i></label>
         </div>
     </nav>

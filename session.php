@@ -5,5 +5,3 @@ function Verifier_session()
         header("location:login.php");
     }
 }
-
-?>
